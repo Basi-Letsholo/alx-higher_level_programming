@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 import this
-text = this
-print(text)
+text = str(this)
+print(text[:-50], end = "")
