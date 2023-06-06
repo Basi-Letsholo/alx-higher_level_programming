@@ -2,6 +2,8 @@
 import random
 number = random.randint(-10000, 10000)
 last = number % 10
+if number < 0:
+    last = -last
 
 if last == 0:
     str = "0"
