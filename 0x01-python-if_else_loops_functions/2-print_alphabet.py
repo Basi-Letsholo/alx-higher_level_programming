@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
-for c in range('a', 'z'):
-    print(f"{c}", end='')
+for i in range(ord('a'), ord('z') + 1):
+    print(("{}").format(chr(i)), end='')
