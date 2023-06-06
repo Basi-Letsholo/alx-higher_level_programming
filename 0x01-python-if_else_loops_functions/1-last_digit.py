@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-last = number % 10
-if number < 0:
-    last = -last
+if number > 0:
+    last = number % 10
+elif number < 0:
+    last = -1 * ((number * -1) % 10)
 
 if last == 0:
     str = "0"
