@@ -5,6 +5,8 @@ if number > 0:
     last = number % 10
 elif number < 0:
     last = -1 * ((number * -1) % 10)
+elif number == 0:
+    last = 0
 
 if last == 0:
     str = "0"
