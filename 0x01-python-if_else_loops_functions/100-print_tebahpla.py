@@ -5,4 +5,4 @@ for i in range(ord('z'), ord('a') - 1, -1):
         x = i
     elif (i % 2) != 0:
         x = i - ord('a') + ord('A')
-    print(chr(x), end='')
+    print(("{}").format(chr(x)), end='')
