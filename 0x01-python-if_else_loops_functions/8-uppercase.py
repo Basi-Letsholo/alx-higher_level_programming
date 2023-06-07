@@ -6,5 +6,5 @@ def uppercase(str):
             x = ord(c) - ord('a') + ord('A')
         elif ord(c) < 97 or ord(c) > 122:
             x = ord(c)
-        print(chr(x), end='')
+        print(("{}").format(chr(x)), end='')
     print('')
