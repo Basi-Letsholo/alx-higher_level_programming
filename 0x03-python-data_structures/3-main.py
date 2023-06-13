@@ -6,3 +6,6 @@ print_reversed_list_integer(my_list)
 
 list_ = [901]
 print_reversed_list_integer(list_)
+
+list_a = None
+print_reversed_list_integer(list_a)
