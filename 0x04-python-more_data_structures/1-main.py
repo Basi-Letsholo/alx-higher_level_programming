@@ -6,3 +6,8 @@ new_list = search_replace(my_list, 2, 89)
 
 print(new_list)
 print(my_list)
+
+list2 = None
+new_list = search_replace(list2, 1, 2)
+print(new_list)
+print(list2)

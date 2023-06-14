@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
 def search_replace(my_list, search, replace):
+    if my_list is None:
+        return
+
     len_list = len(my_list)
     if len_list < 1:
         return
