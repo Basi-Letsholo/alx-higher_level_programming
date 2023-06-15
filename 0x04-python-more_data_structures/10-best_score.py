@@ -8,7 +8,7 @@ def best_score(a_dictionary):
     for value in a_dictionary.values():
         score_list.append(value)
 
-    best_score = 0
+    best_score = score_list[0]
     for i in range(0, len(score_list)):
         if best_score < score_list[i]:
             best_score = score_list[i]
