@@ -6,7 +6,7 @@ def search_replace(my_list, search, replace):
 
     len_list = len(my_list)
     if len_list < 1:
-        return
+        return my_list
 
     new_list = my_list[:]
     for i in range(0, len_list):

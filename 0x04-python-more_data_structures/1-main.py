@@ -7,7 +7,7 @@ new_list = search_replace(my_list, 2, 89)
 print(new_list)
 print(my_list)
 
-list2 = [4, 5, 6]
-new_list = search_replace(list2, 1, 2)
+list2 = []
+new_list = search_replace(list2, 2, 0)
 print(new_list)
 print(list2)
