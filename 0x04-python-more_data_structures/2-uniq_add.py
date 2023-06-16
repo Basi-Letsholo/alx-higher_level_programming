@@ -2,7 +2,7 @@
 
 def uniq_add(my_list=[]):
     if len(my_list) < 1:
-        return
+        return 0
 
     sum_set = 0
     my_set = set(my_list)
