@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "add?"
+read add
+echo "commit?"
+read commit
+
+git add $add
+git commit -m "$commit"
+git push
