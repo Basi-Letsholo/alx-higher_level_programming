@@ -6,7 +6,7 @@ class Square:
     """
     Initialises Attributes.
     """
-    def __init__(self,size=0):
+    def __init__(self, size=0):
         self.__size = size
 
     """
@@ -40,17 +40,10 @@ class Square:
     Prints out Square with '#'
     """
     def my_print(self):
-        for i in range(self.__size):
-            for j in range(self.__size):
-                print("#", end='')
+        if self.__size == 0:
             print('')
-
-
-
-
-
-
-
-
-
-
+        else:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end='')
+                print('')
