@@ -28,6 +28,8 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
 
+        self.__size = value
+
     """
     Gets position of Square.
     """
@@ -46,8 +48,13 @@ class Square:
         if len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
 
-        if value[0] < 0 or value[1] < 0:
+        if not all(isinstance(num, int) for num in value):
             raise TypeError("position must be a tuple of 2 positive integers")
+
+        if value[0] < 0 or value[1] < 0:
+            raise ValueError("position must be a tuple of 2 positive integers")
+        
+        self.__position = value
 
     """
     Defines area of Square.
