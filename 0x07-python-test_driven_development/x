@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# easier way to make python scripts executable
+
+chmod +x *.py
