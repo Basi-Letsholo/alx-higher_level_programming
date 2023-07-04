@@ -16,3 +16,6 @@ TypeError: last_name must be a string
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
+>>> say_my_name("ReallyLongUnecessaryFirstNameToTestIfStringsOfDifferentSizesCanWorkButIAmRunningOutOfThingsToSayButSTillWantToMakeTHisLongerAsLongAsPossible")
+My name is ReallyLongUnecessaryFirstNameToTestIfStringsOfDifferentSizesCanWorkButIAmRunningOutOfThingsToSayButSTillWantToMakeTHisLongerAsLongAsPossible 
+  

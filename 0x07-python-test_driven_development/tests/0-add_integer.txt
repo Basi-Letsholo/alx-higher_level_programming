@@ -18,3 +18,7 @@ Traceback (most recent call last):
 TypeError: b must be an integer
 >>> add_integer(100000000000000000, 1)
 100000000000000001
+>>> add_integer(10000000000000000, -10000000000000000)
+0
+>>> add_integer(10/2)
+103
