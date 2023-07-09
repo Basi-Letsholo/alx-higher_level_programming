@@ -7,8 +7,8 @@ class Rectangle:
     Initialises width and height attributes.
     """
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     """
     Retrieves Width.
@@ -31,6 +31,7 @@ class Rectangle:
     def width(self, value):
         if type(value) is not int:
             raise TypeError("width must be an integer")
+        
         if value < 0:
             raise ValueError("width must be >= 0")
 
