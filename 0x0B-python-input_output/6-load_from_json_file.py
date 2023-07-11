@@ -6,6 +6,9 @@ import json
 
 
 def load_from_json_file(filename):
+    """
+    Returns py object from json file.
+    """
     with open(filename, 'r') as r_file:
         data = r_file.read()
 
