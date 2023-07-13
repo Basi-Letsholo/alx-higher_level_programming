@@ -12,7 +12,7 @@ def text_indentation(text):
 
     if len(text) == 0:
         return
-    
+
     new_text = ''
     i = 0
     while i < len(text) - 1:
