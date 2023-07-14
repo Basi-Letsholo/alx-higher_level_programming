@@ -13,21 +13,21 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        if not hasattr(self, "print_symbol"):
-            self.print_symbol = '#'
+        if not hasattr(self, "_print_symbol"):
+            self._print_symbol = '#'
         Rectangle.number_of_instances += 1
 
     """ Retrieves property for public attr.
     """
     @property
     def print_symbol(self):
-        return Rectangle.print_symbol
+        return self._print_symbol
 
     """ Sets public attr.
     """
     @print_symbol.setter
     def print_symbol(self, value):
-        Rectangle.print_symbol = value
+        self._print_symbol = value
 
     """ Retrieves width property.
     """
