@@ -24,3 +24,8 @@ my_rectangle_3.print_symbol = ["C", "is", "fun!"]
 print(my_rectangle_3)
 
 print("--")
+
+Rectangle.print_symbol = "New"
+my_rectangle_4 = Rectangle(8, 4)
+print(my_rectangle_4)
+print("--")
