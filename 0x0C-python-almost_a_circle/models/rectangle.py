@@ -95,14 +95,41 @@ class Rectangle(Base):
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
+    """ Assigns attributes.
     """
-    """
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         attr = ['id', 'width', 'height', 'x', 'y']
         for i, arg in enumerate(args):
             if i >= len(attr):
                 break
             setattr(self, attr[i], arg)
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+
+    """ Returns dictionary repr of Rectangle.
+    """
+    def to_dictionary(self):
+        rect_dict = {}
+        rect_dict['id'] = self.__id
+        rect_dict['width'] = self.__width
+        rect_dict['height'] = self.__height
+        rect_dict['x'] = self.__x
+        rect_dict['y'] = self.__y
+
+        return rect_dict
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
