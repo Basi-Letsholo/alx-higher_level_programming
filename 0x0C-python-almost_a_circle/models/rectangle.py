@@ -82,7 +82,10 @@ class Rectangle(Base):
     """ Prints Rectangle with '#'.
     """
     def display(self):
+        for _ in range(self.__y):
+            print('')
         for i in range(self.__height):
+            print(' ' * self.__x, end='')
             for j in range(self.__width):
                 print('#', end='')
             print('')
@@ -92,16 +95,14 @@ class Rectangle(Base):
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
-
-
-
-
-
-
-
-
-
-
+    """
+    """
+    def update(self, *args):
+        attr = ['id', 'width', 'height', 'x', 'y']
+        for i, arg in enumerate(args):
+            if i >= len(attr):
+                break
+            setattr(self, attr[i], arg)
 
 
 
