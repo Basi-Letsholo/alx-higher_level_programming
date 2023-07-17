@@ -9,6 +9,8 @@ class Base:
     """Base class.
     """
 
+    """ initialise instance counter.
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -31,10 +33,10 @@ class Base:
 
         json_str = json.dumps(list_dictionaries)
         return json_str
-
-    """ Returns list of json str rep. 
-    """
+ 
     def from_json_string(json_string):
+        """ Returns list of json str rep. 
+        """
         if json_string is None:
             return []
 
