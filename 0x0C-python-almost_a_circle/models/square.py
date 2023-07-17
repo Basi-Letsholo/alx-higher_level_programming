@@ -1,8 +1,14 @@
 #!/usr/bin/python3
 """ Square Class Module, inherits Rectangle. """
 
+import sys
+import os
 
-from rectangle import Rectangle
+
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.append(parent_dir)
+
+from  models.rectangle import Rectangle
 
 
 class Square(Rectangle):
