@@ -16,28 +16,32 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    """ Retrieve properties.
+    """ Retrieve width.
     """
-
     @property
     def width(self):
         return self.__width
 
+    """ Retrieves height.
+    """
     @property
     def height(self):
         return self.__height
 
+    """ Retrieves x.
+    """
     @property
     def x(self):
         return self.__x
 
+    """ Retrieves y.
+    """
     @property
     def y(self):
         return self.__y
 
-    """ Set properties.
+    """ Set width.
     """
-
     @width.setter
     def width(self, value):
         if type(value) is not int:
@@ -47,6 +51,8 @@ class Rectangle(Base):
 
         self.__width = value
 
+    """ Set height.
+    """
     @height.setter
     def height(self, value):
         if type(value) is not int:
@@ -56,6 +62,8 @@ class Rectangle(Base):
 
         self.__height = value
 
+    """ Set x.
+    """
     @x.setter
     def x(self, value):
         if type(value) is not int:
@@ -65,6 +73,8 @@ class Rectangle(Base):
 
         self.__x = value
 
+    """ Set y.
+    """
     @y.setter
     def y(self, value):
         if type(value) is not int:
@@ -118,23 +128,3 @@ class Rectangle(Base):
         rect_dict['y'] = self.__y
 
         return rect_dict
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
