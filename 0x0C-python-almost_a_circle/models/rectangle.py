@@ -5,6 +5,7 @@
 import sys
 import os
 
+
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(parent_dir)
 
@@ -117,7 +118,7 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
-         """ Assigns attributes.
+        """ Assigns attributes.
         """
 
         attr = ['id', 'width', 'height', 'x', 'y']
