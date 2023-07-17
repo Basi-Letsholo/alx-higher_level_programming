@@ -6,23 +6,24 @@ import json
 
 
 class Base:
-    """ Private class attribute.
+    """Base class.
     """
+
     __nb_objects = 0
 
-    """ Initialise attributes.
-    """
     def __init__(self, id=None):
+        """ Initialise attributes.
+        """
         if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-
-    """ Returns JSON str of list dictionaries.
-    """
+ 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """ Returns JSON str of list dictionaries.
+        """
         if list_dictionaries is None:
             return "[]"
         if list_dictionaries == {}:
