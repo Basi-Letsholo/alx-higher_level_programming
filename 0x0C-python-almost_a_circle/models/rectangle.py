@@ -14,43 +14,46 @@ from models.base import Base
 
 class Rectangle(Base):
     """
-    Initialise attributes.
+    Rectangle class.
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ Initialise attributes.
+        """
         self.width = width
         self.height = height
         self.x = x
         self.y = y
         super().__init__(id)
 
-    """ Retrieve width.
-    """
     @property
     def width(self):
+        """ Retrieve property.
+        """
         return self.__width
 
-    """ Retrieves height.
-    """
     @property
     def height(self):
+        """ Retrieve property.
+        """
         return self.__height
 
-    """ Retrieves x.
-    """
     @property
     def x(self):
+        """ Retrieve property.
+        """
         return self.__x
 
-    """ Retrieves y.
-    """
     @property
     def y(self):
+        """ Retrieve property.
+        """
         return self.__y
 
-    """ Set width.
-    """
     @width.setter
     def width(self, value):
+        """ Set width.
+        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -58,10 +61,10 @@ class Rectangle(Base):
 
         self.__width = value
 
-    """ Set height.
-    """
     @height.setter
     def height(self, value):
+        """ Set height.
+        """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -69,10 +72,10 @@ class Rectangle(Base):
 
         self.__height = value
 
-    """ Set x.
-    """
     @x.setter
     def x(self, value):
+        """ Set x.
+        """
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -80,10 +83,10 @@ class Rectangle(Base):
 
         self.__x = value
 
-    """ Set y.
-    """
     @y.setter
     def y(self, value):
+        """ Set y.
+        """
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -91,14 +94,14 @@ class Rectangle(Base):
 
         self.__y = value
 
-    """ Defines area of Rectangle.
-    """
     def area(self):
+        """ Defines area of Rectangle.
+        """
         return self.__width * self.__height
 
-    """ Prints Rectangle with '#'.
-    """
     def display(self):
+        """ Prints Rectangle with '#'.
+        """
         for _ in range(self.__y):
             print('')
         for i in range(self.__height):
@@ -107,14 +110,16 @@ class Rectangle(Base):
                 print('#', end='')
             print('')
 
-    """ Defines str repr of Rectangle.
-    """
+
     def __str__(self):
+        """ Defines str repr of Rectangle.
+        """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
-    """ Assigns attributes.
-    """
     def update(self, *args, **kwargs):
+         """ Assigns attributes.
+        """
+
         attr = ['id', 'width', 'height', 'x', 'y']
         for i, arg in enumerate(args):
             if i >= len(attr):
@@ -124,9 +129,10 @@ class Rectangle(Base):
         for key, value in kwargs.items():
             setattr(self, key, value)
 
-    """ Returns dictionary repr of Rectangle.
-    """
     def to_dictionary(self):
+        """ Returns dictionary repr of Rectangle.
+        """
+
         rect_dict = {}
         rect_dict['id'] = self.id
         rect_dict['width'] = self.__width
