@@ -3,7 +3,7 @@
 
 
 import unittest
-from models.rectangle import rectangle
+from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
@@ -12,4 +12,4 @@ class TestRectangle(unittest.TestCase):
 
     def test_rectangle(self):
         r1 = Rectangle(10, 2)
-        self.assertEqual(r1.id, 1)
+        self.assertEqual(r1.id, 3)

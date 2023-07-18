@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """ Square Class Module, inherits Rectangle. """
 
-from  models.rectangle import Rectangle
+
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -13,13 +14,12 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
-    
     @property
     def size(self):
         """ Retrieves size.
         """
         return self.width
- 
+
     @size.setter
     def size(self, value):
         """ Sets size of Square.
@@ -31,12 +31,14 @@ class Square(Rectangle):
 
         self.width = value
         self.height = value
- 
+
     def __str__(self):
         """ Defines str repr of Square.
         """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
- 
+        sq_str = '[Square] (' + str(self.id) + ') ' + str(self.x)
+        sq_str = sq_str + '/' + str(self.y) + ' - ' + str(self.size)
+        return sq_str
+
     def update(self, *args, **kwargs):
         """ Assigns attributes.
         """

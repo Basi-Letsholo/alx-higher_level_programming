@@ -103,11 +103,13 @@ class Rectangle(Base):
                 print('#', end='')
             print('')
 
-
     def __str__(self):
         """ Defines str repr of Rectangle.
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        r_str = '[Rectangle] (' + str(self.id) + ') ' + str(self.__x) + '/'
+        r_str = r_str + str(self.__y) + ' - ' + str(self.__width) + '/'
+        r_str = r_str + str(self.__height)
+        return r_str
 
     def update(self, *args, **kwargs):
         """ Assigns attributes.
