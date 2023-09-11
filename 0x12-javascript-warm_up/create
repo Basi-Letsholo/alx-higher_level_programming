@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# creates new .js file, adds shebang line, then makes file executable, where filename is given as argument
+
+file="$1"
+
+touch $file
+echo "#!/usr/bin/node" > $file
+echo "" >> $file
+chmod +x $file
+vi $file
