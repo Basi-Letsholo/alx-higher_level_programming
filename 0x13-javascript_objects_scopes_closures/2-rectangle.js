@@ -1,16 +1,8 @@
 #!/usr/bin/node
 
 class Rectangle {
-  width;
-  height;
-
   constructor (w, h) {
-    if (w <= 0 || h <= 0) {
-      this.width = undefined;
-      this.height = undefined;
-      return;
-    }
-    if (typeof w === 'undefined' || typeof h === 'undefined') {
+    if (w <= 0 || h <= 0 || typeof w !== 'number' || typeof h !== 'number') {
       return {};
     }
 
