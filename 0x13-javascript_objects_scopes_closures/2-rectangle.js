@@ -6,7 +6,9 @@ class Rectangle {
 
   constructor (w, h) {
     if (w <= 0 || h <= 0) {
-      return {};
+      this.width = undefined;
+      this.height = undefined;
+      return;
     }
     if (typeof w === 'undefined' || typeof h === 'undefined') {
       return {};
@@ -15,6 +17,6 @@ class Rectangle {
     this.width = w;
     this.height = h;
   }
-}
+ }
 
 module.exports = Rectangle;
