@@ -1,12 +1,12 @@
 #!/usr/bin/node
 
-const Square = require('./5-square');
+const BaseSquare = require('./5-square');
 
-class Square extends Square {
-  charPrint (c) {
-    for (let i = 0; i < this.size; i++) {
-      str = '';
-      for (let j = 0; j < this.size; j++) {
+class Square extends BaseSquare {
+  charPrint (c = 'X') {
+    for (let i = 0; i < this.height; i++) {
+      let str = '';
+      for (let j = 0; j < this.width; j++) {
         str += c;
       }
       console.log(str);
