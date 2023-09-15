@@ -22,7 +22,8 @@ if __name__ == '__main__':
     cursor = connection.cursor()
 
     query = "SELECT * FROM states WHERE "
-    query += "states.name = '{}' ORDER BY states.id ASC".format(state_name)
+    query += "states.name LIKE BINARY '{}' ".format(state_name)
+    query += "ORDER BY states.id ASC"
 
     cursor.execute(query)
     rows = cursor.fetchall()
