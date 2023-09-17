@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
     if len(sys.argv) != 4:
         print('Usage: ./7-model_state_fetch_all.py username password db')
-        sys.exit(0)
+        sys.exit(1)
 
     username = sys.argv[1]
     password = sys.argv[2]
