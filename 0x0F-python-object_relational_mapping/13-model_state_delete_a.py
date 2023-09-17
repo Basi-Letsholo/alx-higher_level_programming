@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+"""Deletes all State objects with letter 'a' from database."""
+
+
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from model_state import State, Base
+import sys
+
+if __name__ == '__main__':
+
+    if len(sys.argv) != 4:
+        print('Usage: ./13-model... username passowrd database')
+        sys.exit(1)
+
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+
+    engine = create_engine('mysql://{}:{}@localhost:3306/{}'.format(
+                            username, password, database))
+
+    thisSession = sessionmaker(bind=engine)
+    session = thisSession()
+
+    states_to_del = session.query(State).filter(State.name.like('%a%')).all()
+    for state in states_to_del:
+        session.delete(state)
+    session.commit()
+
+    session.close()
