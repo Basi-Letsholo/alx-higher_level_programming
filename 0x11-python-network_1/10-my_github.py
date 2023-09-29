@@ -9,9 +9,9 @@ if __name__ == "__main__":
 
     username = sys.argv[1]
     password = sys.argv[2]
-    url = f'https://api.github.com/user'
+    url = 'https://api.github.com/user'
 
-    headers = {'Authorization': f'Basi {username}:{password}'}
+    headers = {'Authorization': f'Basic {username}:{password}'}
 
     response = requests.get(url, headers=headers)
 
