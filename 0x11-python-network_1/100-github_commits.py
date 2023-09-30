@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     owner = sys.argv[2]
     repo = sys.argv[1]
-    url = f'https://api.github.com/repos/{owner}/{repo}/commits'
+    url = f'https://api.github.com/repos/{owner}/{repo}/commits?per_page=10'
 
     response = requests.get(url)
 
@@ -29,8 +29,11 @@ if __name__ == '__main__':
                 'name' in item['commit']['author']:
             authors.append(item['commit']['author']['name'])
 
-    first_10 = sha_items[:10]
-    first_authors = authors[:10]
-
     for i in range(0, 10):
-        print(f'{first_10[i]}: {first_authors[i]}')
+        print(f'{sha_items[i]}: {authors[i]}')
+
+#    first_10 = sha_items[:10]
+#    first_authors = authors[:10]
+
+#    for i in range(0, 10):
+#        print(f'{first_10[i]}: {first_authors[i]}')
