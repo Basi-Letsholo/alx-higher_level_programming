@@ -11,16 +11,13 @@ if __name__ == "__main__":
     password = sys.argv[2]
     url = 'https://api.github.com/user'
 
-    headers = {'Authorization': f'Basic {username}:{password}'}
+    headers = {'Authorization': f'Bearer {password}'}
 
     response = requests.get(url, headers=headers)
 
-    if response.status_code == 200:
-        user_data = response.json()
-        user_id = user_data.get('id')
-        if user_id is not None:
-            print(user_id)
-        else:
-            print(None)
-    else:
+    if response.status_code >= 400:
         print(None)
+        sys.exit(1)
+
+    user_id = response.json().get("id")
+    print(user_id)
