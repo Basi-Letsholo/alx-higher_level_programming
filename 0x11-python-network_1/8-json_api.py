@@ -17,13 +17,17 @@ if __name__ == "__main__":
     parameters = {'q': letter}
     response = requests.post(url, data=parameters)
 
-    data = response.json()
+    try:
+        data = response.json()
 
-    if isinstance(data, dict) and len(data) > 0:
-        data_id = data.get('id')
-        data_name = data.get('name')
-        print('[{}] {}'.format(data_id, data_name))
-    elif isinstance(data, dict) and len(data) == 0:
-        print('No result')
-    else:
+        if isinstance(data, dict) and len(data) > 0:
+            data_id = data.get('id')
+            data_name = data.get('name')
+            print('[{}] {}'.format(data_id, data_name))
+        elif isinstance(data, dict) and len(data) == 0:
+            print('No result')
+        else:
+            print('Not a valid JSON')
+
+    except ValueError:
         print('Not a valid JSON')
