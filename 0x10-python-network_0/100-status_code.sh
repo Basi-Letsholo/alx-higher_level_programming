@@ -1,3 +1,3 @@
 #!/bin/bash
 # Displays status code of request
-curl -sI "$1" | grep -i 'HTTP/1.1' | awk '{print $2}'
+curl -sI -o /dev/null -w "%{http_code}" "$1"
