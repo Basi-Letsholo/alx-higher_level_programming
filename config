@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# configure git
+git config --global user.email "basi.letsholo7@gmail.com"
+git config --global user.name "Basi-Letsholo"
+
+# set up .vimrc file
+echo -e "set number\nset smartindent\nset autoindent\nfiletype plugin indent on\n\n
+\" Custom color for Python functions\nautocmd FileType python highlight pythonBuiltin ctermfg=blue" > ~/.vimrc
+
